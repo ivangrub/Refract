@@ -1,6 +1,15 @@
 # Converter
 
-Converts eLife XML-format to a JSON representation that can be consumed by web-clients.
+Converts NLM XML-format to a JSON representation that can be consumed by Lens and other web-clients.
+
+# Experimental warnings
+
+Refract will convert NLM formatted XML files into their JSON notation. Some of the meta related information (e.g. keywords, subject matter, organism), along with author contributions and conflict of interest might not render correctly because different publishers might have them in different portions of the XML and defined with different attribute tags. The other main issue during the conversion process that has come up is with annotating xref instance. If the ref-type is not supported in the convert variable within the converter, those links will not be established. The text will still render though. 
+
+Finally, each publisher will have to provide their own "magic potion" to get the figure and video URLs. 
+
+Please post to the issues if you have any questions and feel free to open up developmental branches where we can help make the necessary tweaks to get things running for you!
+
 
 ## Prerequisites
 
